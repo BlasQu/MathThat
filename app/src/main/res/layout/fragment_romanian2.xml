@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.RomanianFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rellayout">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/toRoman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/buttonshape"
+                android:layout_weight="1"
+                android:text="To Roman"
+                android:textSize="27dp"
+                android:padding="6dp"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/toDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:layout_below="@id/numberResult"
+                android:layout_weight="1"
+                android:text="To Decimal"
+                android:textSize="27dp"
+                android:layout_margin="15dp"
+                android:padding="6dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/rl1"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/NumberText"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:text="Number: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ResultText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/NumberText"
+                android:textSize="30sp"
+                android:text="Result: "/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rl1"
+            android:layout_margin="20dp">
+
+            <EditText
+                android:id="@+id/numberInput2"
+                android:editable="false"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="9dp"
+                android:hint="MMXX"
+                android:maxLength="14"
+                android:background="@drawable/edittextbox"/>
+
+            <EditText
+                android:id="@+id/numberResult2"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="9dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="3"
+                android:editable="false"
+                android:layout_below="@id/numberInput2"
+                android:hint="2020"
+                android:background="@drawable/edittextbox"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/copyresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_content_copy_24"
+            android:layout_toRightOf="@id/rl2"
+            android:layout_marginTop="85dp"
+            android:layout_marginRight="5dp"
+            app:tint="@color/lightblue" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl1"
+            android:layout_above="@id/ll"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberC"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="C"
+                android:textSize="40dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberD"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/numberC"
+                android:text="D"
+                android:textSize="40dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberM"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/numberD"
+                android:text="M"
+                android:textSize="40dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberV"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/numberC"
+                android:text="V"
+                android:textSize="40dp"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberX"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/numberV"
+                android:layout_below="@id/numberD"
+                android:text="X"
+                android:textSize="40dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberL"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/numberX"
+                android:layout_below="@id/numberM"
+                android:text="L"
+                android:textSize="40dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberI"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/numberV"
+                android:layout_below="@id/numberX"
+                android:layout_marginLeft="25dp"
+                android:text="I"
+                android:textSize="40dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberBack2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/numberL"
+                android:drawableLeft="@drawable/ic_baseline_keyboard_backspace_24"
+                android:layout_below="@id/numberM"
+                android:textSize="40dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/buttonshape"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/numberClear2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/numberM"
+                android:text="C"
+                android:textSize="40dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/buttonshape"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>
